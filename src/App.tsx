@@ -7,7 +7,6 @@ import { Spin } from 'antd';
 import ErrorBoundary from './components/ErrorBoundary';
 import { Routes } from './routes';
 import { PreferencesProvider } from './utils/preferences';
-        import cors from 'cors';
 
 
 export default function App() {
