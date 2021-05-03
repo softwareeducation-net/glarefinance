@@ -5,7 +5,6 @@ import { TOKEN_MINTS } from '@project-serum/serum';
 import apps from '@project-serum/awesome-serum';
 
 const { Option } = Select;
-
 const appsAndTokens = apps.concat(
   TOKEN_MINTS.map((mint) => {
     return {
