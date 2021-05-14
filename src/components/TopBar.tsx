@@ -35,7 +35,7 @@ const LogoWrapper = styled.div`
   cursor: pointer;
   img {
     height: 30px;
-    margin-right: 8px;
+    margin-right: 2px;
   }
 `;
 
@@ -142,7 +142,7 @@ export default function TopBar() {
       <Wrapper>
         <LogoWrapper onClick={() => history.push(tradePageUrl)}>
           <img src={logo} alt="" />
-          {'Glare'}
+
         </LogoWrapper>
         <Menu
           mode="horizontal"
