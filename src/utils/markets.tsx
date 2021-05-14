@@ -224,7 +224,7 @@ export function useCustomMarkets() {
 export function MarketProvider({ marketAddress, setMarketAddress, children }) {
   const { customMarkets, setCustomMarkets } = useCustomMarkets();
 
-  const address = marketAddress && new PublicKey(marketAddress);
+  const address = marketAddress && new PublicKey("7MpMwArporUHEGW7quUpkPZp5L5cHPs9eKUfKCdaPHq2");
   const connection = useConnection();
   const marketInfos = getMarketInfos(customMarkets);
   const marketInfo =

@@ -8,6 +8,9 @@ const { useBreakpoint } = Grid;
 const footerElements = [
   { description: 'Project Serum', link: helpUrls.projectSerum },
   { description: 'Solana Network', link: helpUrls.solanaBeach },
+        { description: 'Telegram', link: helpUrls.solanaBeach },
+        { description: 'Twitter', link: helpUrls.solanaBeach },
+
 ];
 
 export const CustomFooter = () => {
