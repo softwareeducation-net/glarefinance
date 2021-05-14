@@ -44,7 +44,7 @@ import BonfidaApi from './bonfidaConnector';
 import { sleep } from './utils';
 
 // Used in debugging, should be false in production
-const _IGNORE_DEPRECATED = false;
+const _IGNORE_DEPRECATED = true;
 
 export const USE_MARKETS: MarketInfo[] = _IGNORE_DEPRECATED
   ? MARKETS.map((m) => ({ ...m, deprecated: false }))
