@@ -44,14 +44,14 @@ import BonfidaApi from './bonfidaConnector';
 import { sleep } from './utils';
 
 // Used in debugging, should be false in production
-const _IGNORE_DEPRECATED = true;
+const _IGNORE_DEPRECATED = false;
 
 export const USE_MARKETS: MarketInfo[] = _IGNORE_DEPRECATED
   ? MARKETS.map((m) => ({ ...m, deprecated: false }))
   : MARKETS;
 
 export function useMarketsList() {
-  return USE_MARKETS.filter(({ name, deprecated }) => !deprecated && !process.env.REACT_APP_EXCLUDE_MARKETS?.includes(name));
+  return USE_MARKETS.filter(({ name, deprecated }) => !deprecated && ! process.env.REACT_APP_EXCLUDE_MARKETS?.includes(name));
 }
 
 export function useAllMarkets() {
