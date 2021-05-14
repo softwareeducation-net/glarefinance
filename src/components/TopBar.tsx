@@ -181,13 +181,7 @@ export default function TopBar() {
             </Menu.Item>
           )}
           {!searchFocussed && (
-            <Menu.SubMenu
-              title="LEARN"
-              onTitleClick={() =>
-                window.open(EXTERNAL_LINKS['/learn'], '_blank')
-              }
-              style={{ margin: '0 0px 0 10px' }}
-            >
+            <Menu.SubMenu>
               <Menu.Item key="/add-market">
                 <a
                   href={EXTERNAL_LINKS['/add-market']}
