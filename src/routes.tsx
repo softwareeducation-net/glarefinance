@@ -20,7 +20,7 @@ export function Routes() {
             <Route exact path="/">
               <Redirect to={getTradePageUrl()} />
             </Route>
-            <Route exact path="/market/7MpMwArporUHEGW7quUpkPZp5L5cHPs9eKUfKCdaPHq2">
+            <Route exact path="/market/:marketAddress">
               <TradePage />
             </Route>
             <Route exact path="/orders" component={OpenOrdersPage} />
