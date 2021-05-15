@@ -78,11 +78,11 @@ export function useAllMarkets() {
             programId: marketInfo.programId,
           };
         } catch (e) {
-          notify({
-            message: 'Error loading all market',
-            description: e.message,
-            type: 'error',
-          });
+          //notify({
+           // message: 'Error loading all market',
+          //  description: e.message,
+          //  type: 'error',
+          // });
           return null;
         }
       }),
@@ -253,21 +253,18 @@ export function MarketProvider({ marketAddress, setMarketAddress, children }) {
     }
     setMarket(null);
     if (!marketInfo || !marketInfo.address) {
-      notify({
-        message: 'Error loading market',
-        description: 'Please select a market from the dropdown',
-        type: 'error',
-      });
+      //notify({
+      //  message: 'Error loading market',
+      //  description: 'Please select a market from the dropdown',
+      //  type: 'error',
+      //});
       return;
     }
     Market.load(connection, marketInfo.address, {}, marketInfo.programId)
       .then(setMarket)
       .catch((e) =>
-        notify({
-          message: 'Error loading market',
-          description: e.message,
-          type: 'error',
-        }),
+        console.log(e.message),
+
       );
     // eslint-disable-next-line
   }, [connection, marketInfo]);
@@ -975,10 +972,10 @@ export function useUnmigratedDeprecatedMarkets() {
       );
       if (!marketInfo) {
         console.log('Failed loading market');
-        notify({
-          message: 'Error loading market',
-          type: 'error',
-        });
+        //notify({
+        //  message: 'Error loading market',
+        //  type: 'error',
+        //});
         return null;
       }
       try {
@@ -992,11 +989,11 @@ export function useUnmigratedDeprecatedMarkets() {
         );
       } catch (e) {
         console.log('Failed loading market', marketInfo.name, e);
-        notify({
-          message: 'Error loading market',
-          description: e.message,
-          type: 'error',
-        });
+        //notify({
+        //  message: 'Error loading market',
+        //  description: e.message,
+        //  type: 'error',
+        //});
         return null;
       }
     };
