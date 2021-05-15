@@ -78,7 +78,7 @@ export function useAllMarkets() {
             programId: marketInfo.programId,
           };
         } catch (e) {
-          //notify({
+          // notify({
            // message: 'Error loading all market',
           //  description: e.message,
           //  type: 'error',
