@@ -30,10 +30,12 @@ const RowBox = styled(Row)`
 const Tip = styled.p`
   font-size: 12px;
   padding-top: 6px;
+
 `;
 
+
 const ActionButton = styled(Button)`
-  color: #2abdd2;
+  color: #00FEBC;
   background-color: #212734;
   border-width: 0px;
 `;
@@ -189,7 +191,7 @@ export default function StandaloneBalancesDisplay() {
                   title="Token mint"
                   trigger="hover"
                 >
-                  <InfoCircleOutlined style={{ color: '#2abdd2' }} />
+                  <InfoCircleOutlined style={{ color: '#00FEBC' }} />
                 </Popover>
               )}
             </Divider>
@@ -238,7 +240,7 @@ export default function StandaloneBalancesDisplay() {
             </RowBox>
             <Tip>
               All deposits go to your{' '}
-              <Link external to={providerUrl}>
+              <Link style={{ color: '#00FEBC' }} external to={providerUrl}>
                 {providerName}
               </Link>{' '}
               wallet
